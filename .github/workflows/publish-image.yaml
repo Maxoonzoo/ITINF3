@@ -1,7 +1,7 @@
 name: publish image to docker hub
 
 on:
-  [worflow_dispatch]
+  [worflow_dispatch, push]
 
 jobs:
   publis_image:
