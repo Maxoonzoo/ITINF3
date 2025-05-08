@@ -1,9 +1,6 @@
 name: publish image to docker hub
 
-on:
-  [workflow_dispatch, push]
-  branches:
-    - master
+on: workflow_dispatch
 
 jobs:
   publis_image:
