@@ -11,7 +11,11 @@ jobs:
       - name: build
         run: |
           docker build . -t maxoonzoo/docker-hello-world:latest
+      - name: login to docker hub
+        uses: docker/login-action@v2
+        with:
+          username: maxoonzoo
+          password: ${{ secrets.DOCKER_HUB_TOKEN }}
       - name: publish 
         run: 
-          docker login -u maxoonzoo -p ${{ secrets.DOCKER_HUB_TOKEN }}
           docker push maxoonzoo/docker-hello-world:latest
