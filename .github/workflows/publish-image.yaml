@@ -13,4 +13,5 @@ jobs:
           docker build . -t maxoonzoo/docker-hello-world:latest
       - name: publish 
         run: 
+          docker login -u maxoonzoo -p ${{ secrets.DOCKER_HUB_TOKEN }}
           docker push maxoonzoo/docker-hello-world:latest
